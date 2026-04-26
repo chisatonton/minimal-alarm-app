@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alarm</title>
+  <title>Pokémon Alarm</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,7 +11,9 @@
     <div class="clock" id="clock">00:00:00</div>
 
     <div class="alarm-set">
-      <input type="time" id="alarm-time" />
+      <select id="hour-select"></select>
+      <span class="colon">:</span>
+      <select id="minute-select"></select>
       <button id="add-btn">+ Add</button>
     </div>
 
@@ -20,15 +22,12 @@
 
   <div class="overlay hidden" id="overlay">
     <div class="modal">
-      <div class="bell">🔔</div>
+      <img id="modal-sprite" src="" alt="" />
+      <p id="modal-name"></p>
       <p id="modal-time"></p>
       <button id="dismiss-btn">Dismiss</button>
     </div>
   </div>
-
-  <audio id="alarm-audio" loop>
-    <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" type="audio/mpeg">
-  </audio>
 
   <script src="app.js"></script>
 </body>
